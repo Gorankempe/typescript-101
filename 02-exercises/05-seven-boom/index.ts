@@ -8,7 +8,13 @@
  * - "The bomb is disarmed" in any other case
  */
 const sevenBoom = (numbers: number[]): "Boom!" | "The bomb is disarmed" => {
-    throw new Error("Not implemented")
+
+    let string_of_numbers = numbers.toString()
+    if (string_of_numbers.includes("7")) {
+        return "Boom!" 
+    } else {
+        return "The bomb is disarmed"
+    }
 }
 
 let result = sevenBoom([1, 2, 3, 4, 5, 6, 7])
